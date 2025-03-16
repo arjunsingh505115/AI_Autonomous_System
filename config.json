@@ -1,0 +1,6 @@
+{
+    "auto_upgrade": true,
+    "error_scan_interval": 10,
+    "api_endpoint": "https://api.example.com",
+    "max_commands": 100
+}
