@@ -1,0 +1,35 @@
+import os
+
+class CommandCenter:
+    INBOX_FILE = "inbox/commands.txt"
+
+    def process_commands(self):
+        if os.path.exists(self.INBOX_FILE):
+            with open(self.INBOX_FILE, "r") as f:
+                commands = f.readlines()
+
+            if commands:
+                for command in commands:
+                    command = command.strip().lower()
+                    if "install" in command:
+                        tech = command.split("install")[1].strip()
+                        self._install_technology(tech)
+                    elif "upgrade" in command:
+                        self._upgrade_system()
+                    elif "check errors" in command:
+                        self._check_errors()
+                    else:
+                        print(f"📥 Executing: {command}")
+                os.remove(self.INBOX_FILE)
+
+    def _install_technology(self, tech):
+        print(f"🔧 Installing {tech}...")
+        # Add logic to install new technology here
+
+    def _upgrade_system(self):
+        print("🔄 Upgrading system...")
+        # Add logic to upgrade the system here
+
+    def _check_errors(self):
+        print("🔍 Checking for errors...")
+        # Add logic to check for errors here

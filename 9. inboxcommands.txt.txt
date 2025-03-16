@@ -1,0 +1,5 @@
+# This file stores commands sent to the AI system.
+# Example:
+# install new_technology
+# upgrade
+# check errors
