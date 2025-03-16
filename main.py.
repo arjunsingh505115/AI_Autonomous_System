@@ -3,6 +3,7 @@ from self_build import SelfBuild
 from error_fix import ErrorFix
 from command_center import CommandCenter
 from ai_modules.advanced_ai import AdvancedAI
+from config_manager import ConfigManager  # Import ConfigManager
 
 class AI_Autonomous_System:
     def __init__(self):
@@ -10,6 +11,7 @@ class AI_Autonomous_System:
         self.error_fix = ErrorFix()
         self.command_center = CommandCenter()
         self.advanced_ai = AdvancedAI()
+        self.config_manager = ConfigManager()  # Initialize ConfigManager
 
     def run(self):
         print("🚀 AI Autonomous System Started...")
